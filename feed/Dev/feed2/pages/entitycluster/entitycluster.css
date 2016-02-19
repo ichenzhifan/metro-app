@@ -1,0 +1,140 @@
+﻿.entitycluster section[role=main] {
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.entitycluster header[role=banner] #pagetitle {
+    text-transform: capitalize;
+}
+
+.entitycluster section[role=main] #entityCluster {
+    margin-top: 5px;
+    height: 100%;
+}
+
+    .entitycluster section[role=main] #entityCluster .entityClusterGridWrapper {
+        height: 100%;
+    }
+
+    .entitycluster section[role=main] #entityCluster .entityClusterGrid {
+        margin-left: 120px;
+    }
+
+@media (-ms-view-state: fullscreen-landscape), (-ms-view-state: filled),(-ms-view-state: fullscreen-portrait)
+{
+    .entitycluster #entityECSnapped {
+        display:none;
+    }
+}
+
+
+@media screen and (-ms-view-state: snapped) {
+    .entitycluster header[role=banner] .headerimage {
+        display: none;
+    }
+
+    .entitycluster header[role=banner] #pagetitle {
+        text-align: left;
+        -ms-grid-column: 2;
+        color: #252162;
+    }
+
+    .entitycluster section[role=main] #entityCluster {
+        display: none;
+    }
+
+    .entitycluster section[role=main] {
+        margin-left: 10px;
+        width: 310px;
+        height: 900px;
+        overflow-y: scroll;
+    }
+
+
+    .entitycluster #entityECSnapped {
+        display: block;
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+        overflow-y: hidden;
+    }
+
+    .entitycluster .win-container:hover {
+        outline: none;
+        background: rgba(0,0,0,0.1);
+    }
+
+    .entitycluster #entityECSnapped .win-item {
+        display: -ms-grid;
+        -ms-grid-columns: 90px 1fr;
+        -ms-grid-rows: 90px;
+    }
+
+        .entitycluster #entityECSnapped .win-item .itemThumb {
+            display: -ms-grid;
+            -ms-grid-columns: 90px;
+            -ms-grid-rows: 90px;
+            position: relative;
+        }
+
+            .entitycluster #entityECSnapped .win-item .itemThumb img {
+                -ms-grid-column-align: stretch;
+                -ms-grid-row-align: center;
+            }
+
+            .entitycluster #entityECSnapped .win-item .itemThumb .overflow {
+                background: rgba(255,255,255,0.4);
+                width: 90px;
+                height: 90px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .entitycluster #entityECSnapped .win-item .itemThumb .play {
+                position: absolute;
+                top: 15px;
+                left: 15px;
+            }
+
+            .entitycluster #entityECSnapped .win-item .itemThumb .win-commandicon.win-commandring {
+                width: 30px;
+                height: 30px;
+            }
+
+            .entitycluster #entityECSnapped .win-item .itemThumb .win-commandimage {
+                width: 30px;
+                height: 30px;
+                font-size: 9pt;
+                line-height: 30px;
+            }
+
+
+
+        .entitycluster #entityECSnapped .win-item .itemText {
+            margin-left: 5px;
+            -ms-grid-column: 2;
+        }
+
+        .entitycluster #entityECSnapped .win-item .title {
+            height: 60px;
+            overflow-y: hidden;
+        }
+
+
+        .entitycluster #entityECSnapped .win-item .itemText h4 {
+            color: #252162;
+        }
+}
+
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+    .entitycluster section[role=main] {
+        margin-right: 100px;
+    }
+
+    .entitycluster.fragment header[role=banner] {
+        -ms-grid-columns: 39px 81px 300px 1fr;
+    }
+}

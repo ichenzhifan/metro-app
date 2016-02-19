@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="c8ac480d-6803-4df5-8b31-f12bb68b189b" Version="1.0.0.1" Publisher="CN=mikhaila" />
+  <Properties>
+    <DisplayName>App16</DisplayName>
+    <PublisherDisplayName>mikhaila</PublisherDisplayName>
+    <Logo>images\storelogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="default.html">
+      <VisualElements DisplayName="Tribune WGN FOX40 App" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="Tribune WGN App" ForegroundText="dark" BackgroundColor="white">
+        <DefaultTile ShowName="allLogos" WideLogo="images\wideLogo.png" />
+        <SplashScreen Image="images\splashscreen.png" BackgroundColor="white" />
+      </VisualElements>
+      <Extensions>
+        <Extension Category="windows.search" />
+        <Extension Category="windows.backgroundTasks" EntryPoint="FOX40Task.LiveTile">
+          <BackgroundTasks>
+            <Task Type="systemEvent" />
+          </BackgroundTasks>
+        </Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

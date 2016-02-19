@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>entitycluster</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="entitycluster.css" rel="stylesheet" />
+    <script src="entitycluster.js"></script>
+</head>
+<body>
+    <div class="entitycluster fragment">
+        <progress id="loadingIndicator"></progress>
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" id="win-backbutton" aria-label="Back" disabled type="button"></button>
+            <img class="headerimage" src="../../images/fox40bluelogo-400x140.png" />
+            <span id="pagetitle">Welcome to entitycluster</span>
+        </header>
+        <section aria-label="Main content" role="main">
+
+            <div class="templates">
+
+                <div class="vodeoItem snapped" id="itemSnapped" data-win-control="WinJS.Binding.Template">
+                    <div class="itemThumb">
+                        <div class="overflow" data-win-bind="style.display: thumbnail ArticleData.showPaly  "></div>
+                        <img data-win-bind="src : thumbnail ArticleData.getThumbnail" />
+                        <div class="play" data-win-bind="style.display: thumbnail ArticleData.showPaly  ">
+                            <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdPlay',label:'Play',icon:'play',section:'global',tooltip:'Play'}"></button>
+                        </div>
+                    </div>
+                    <div class="itemText">
+                        <div class="title">
+                            <h4 data-win-bind="innerText : title"></h4>
+                        </div>
+                        <h6 data-win-bind="innerText : publishTime"></h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sectionBody" id="entityECSnapped"
+                data-win-control="WinJS.UI.ListView"
+                data-win-options="{itemTemplate: select('#itemSnapped'),
+                layout:{type: WinJS.UI.ListLayout}
+                }">
+            </div>
+
+            <div id="entityCluster" data-win-control="BingApps.UI.EntityCluster">
+            </div>
+        </section>
+        <!--        <div data-win-control="WinJS.UI.AppBar" data-win-options="{ placement: 'bottom', layout:'custom'}">
+            <div id="navigationBarBtm" data-win-control="BingApps.UI.NavigationBar" data-win-options="{ channels: App.Data.NavBarConfigBtm }">
+            </div>
+        </div>-->
+    </div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>homePage</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="/pages/home/home.css" rel="stylesheet" />
+    <script src="/pages/home/home.js"></script>
+    <script src="/pages/home/sliderdata.js"></script>
+</head>
+<body>
+    <!-- The content that will be loaded and displayed. -->
+    <div class="fragment homepage">
+        <progress id="loadingIndicator"></progress>
+        <header aria-label="Header content" role="banner">
+            <button class="win-backbutton" id="win-backbutton" aria-label="Back" disabled type="button"></button>
+            <img class="headerimage" src="../../images/q13fox-400x140.png" />
+            <h1 class="titlearea win-type-ellipsis">
+                <span class="pagetitle"></span>
+            </h1>
+        </header>
+        <section aria-label="Main content" role="main">
+            <div class="templates">
+                <div class="articleItem snapped" id="snappedArticleItem" data-win-control="WinJS.Binding.Template">
+                    <img class="itemThumb" data-win-bind="src : thumbnail ArticleData.getThumbnail" />
+                    <div class="itemText">
+                        <div style="height: 40px; overflow: hidden;">
+                            <h4 data-win-bind="innerText : title"></h4>
+                        </div>
+                        <h6 data-win-bind="innerText : publishTime"></h6>
+                    </div>
+                </div>
+
+                <div class="vodeoItem snapped" id="snappedVideoItem" data-win-control="WinJS.Binding.Template">
+
+                    <div class="itemThumb">
+                        <div class="overflow" data-win-bind="style.display: thumbnail ArticleData.showPaly  "></div>
+                        <img data-win-bind="src : thumbnail ArticleData.getThumbnail" />
+                        <div class="play" data-win-bind="style.display: thumbnail ArticleData.showPaly  ">
+                            <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdPlay',label:'Play',icon:'play',section:'global',tooltip:'Play'}"></button>
+                        </div>
+                    </div>
+                    <div class="itemText">
+                        <div style="height: 40px; overflow: hidden;">
+                            <h4 data-win-bind="innerText : title"></h4>
+                        </div>
+                        <h6 data-win-bind="innerText : publishTime"></h6>
+                    </div>
+                </div>
+            </div>
+
+            <div id="root">
+                <div class="sectionBlock" id="featuredStories">
+                    <div class="sectionTitle" id="featuredStoriesTitle">
+                        <span>Featured Stories</span>
+                        <div class="arrowRight"></div>
+                    </div>
+                    <div class="sectionBody" id="featuredStoriesEC">
+                        <div id="ItemTemplate" data-win-control="WinJS.Binding.Template">
+                            <div class="overlaidItemTemplate">
+                                <img class="image big-img" src="#" data-win-bind="src: picture; alt:title; alt:id" />
+                                <div class="overlay">
+                                    <span class="ItemTitle" data-win-bind="innerText:title"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="sliderView">
+                            <div id="basicFlipView"
+                                data-win-control="WinJS.UI.FlipView"
+                                data-win-options="{itemDataSource : SliderData.itemList.dataSource,itemTemplate:select('#ItemTemplate') }">
+                            </div>
+                            <div id="ContextContainer"></div>
+                            <div id="featuredAds">
+                                <div id="fad1" data-win-control="MicrosoftNSJS.Advertising.AdControl" data-win-options="{applicationId: 'd25517cb-12d4-4699-8bdc-52040c712cab', adUnitId: '10043008'}"></div>
+                                <div id="fad2" data-win-options="{applicationId: 'd25517cb-12d4-4699-8bdc-52040c712cab', adUnitId: '10043057'}" data-win-control="MicrosoftNSJS.Advertising.AdControl"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sectionBlock" id="latestECDiv">
+                    <div class="sectionTitle titleHover" id="latestECTitle">
+                        <span>Latest</span>
+                        <div class="arrowRight"></div>
+                    </div>
+                    <div class="sectionBody" id="latestEC" data-win-control="BingApps.UI.EntityCluster"
+                        data-win-options="{ maxColumnCount: 4 }">
+                    </div>
+                </div>
+                <div class="sectionBody" id="latestECSnapped"
+                    data-win-control="WinJS.UI.ListView"
+                    data-win-options="{itemTemplate: select('#snappedArticleItem'),
+                    layout:{type: WinJS.UI.ListLayout}
+                    }">
+                </div>
+
+                <div id="ad1" data-win-control="MicrosoftNSJS.Advertising.AdControl" data-win-options="{applicationId: 'd25517cb-12d4-4699-8bdc-52040c712cab', adUnitId: '10043135'}"></div>
+
+                <div class="sectionBlock" id="videosECDiv">
+                    <div class="sectionTitle titleHover" id="videosECTitle">
+                        <span>Videos</span>
+                        <div class="arrowRight"></div>
+                    </div>
+                    <div class="sectionBody" id="videosEC" data-win-control="BingApps.UI.EntityCluster"
+                        data-win-options="{ maxColumnCount: 4 }">
+                    </div>
+                </div>
+                   <div class="sectionBody" id="videosECSnapped" 
+                data-win-control="WinJS.UI.ListView"
+                data-win-options="{itemTemplate: select('#snappedVideoItem'),
+                layout:{type: WinJS.UI.ListLayout}
+                }">
+            </div>
+
+        </section>
+        <div class="appNavBar-subpage" data-win-control="WinJS.UI.AppBar" data-win-options="{placement:'top'}">
+            <button class="navBarCom" data-win-control="WinJS.UI.AppBarCommand" data-win-options="{ 
+            id:'navRefreshButton', 
+            label:'Refresh', 
+            icon:'refresh',
+            section:'global',
+            tooltip:'Refresh'
+            }">
+            </button>
+        </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+﻿// Localizing a Windows Web Application: http://go.microsoft.com/fwlink/?LinkId=212836
+//
+// HTML Example:
+//     <span data-win-res="textContent:greeting"></span> 
+//
+// JavaScript Example:
+//     var resources = new Windows.ApplicationModel.Resources.ResourceLoader();
+//     var message = resources.getString("farewell");
+//
+// If localizing HTML, add res.js to the HTML document and make a call
+// to WinJS.Resources.processAll() on DOMContentLoaded.
+//
+// Define your resources here as a set of name/value pairs in a JSON object 
+// enclosed by braces ({}).  Names and values are strings enclosed by 
+// quotation marks (").  Each name is separated from its value by a colon (:).  
+// Name/value pairs are separated by a commas (,).  Names beginning with
+// underscore (_) are reserved for comments.
+
+{
+    "PageOf"                  : "Page {0} of {1}",
+    "NextArticle"             : "Next article",
+    "PreviousArticle"         : "Previous article",
+    "ArticleTextSizeSmall"               : "Small",
+    "ArticleTextSizeMedium"              : "Medium",
+    "ArticleTextSizeLarge"               : "Large",
+    "ArticleTextSizeXLarge"              : "X-Large",
+    "ArticleTextSizeMenuLabel"           : "Text size",
+    "ArticleTextStyleMenuLabel"          : "Text style",
+    "ArticleReaderUnsnap"     : "Read article",
+    "Contents"                : "Contents",
+    "Unsnap"                  : "Unsnap",
+
+    "TextStylePrimary"                                :"Primary",
+    "TextStylePrimary.comment"                        :"Used to indicate the default text styling",
+    "TextStyleSecondary"                              :"Secondary",
+    "TextStyleSecondary.comment"                      :"Used to indicate the optional text styling",
+    "ColumnCountIsInvalid"                            :"Invalid argument: ColumnCount must be an integer.",
+    "LeftMarginIsInvalid"                             :"Invalid argument: LeftMargin must be an integer.",
+    "RightMarginIsInvalid"                            :"Invalid argument: RightMargin must be an integer.",
+    "TopMarginIsInvalid"                              :"Invalid argument: TopMargin must be an integer.", 
+    "BottomMarginIsInvalid"                           :"Invalid argument: BottomMargin must be an integer.",
+    "ColumnMarginIsInvalid"                           :"Invalid argument: ColumnMargin must be an integer.",
+
+    "Loading"                  : "Loading",
+    "_Loading.comment"         : "Loading indicator label for UX Framework",
+    "progressAlertAriaLabel"            : "Alert",
+
+    "_progressAlertAriaLabel.comment"   : "Aria label for progress loading, e.g. will say 'Alert. Loading'",
+
+    "videoCountdownText"        : "Up next in {0}",
+    "videoLoadErrorText"        : "We're having problems loading this video, please try again later",
+    "videoConnectErrorText"     : "Please connect to the internet and try again",
+    "videoGeoErrorText"         : "Video is not available for current location",
+
+    "GoBack"                   : "Go Back",
+    "_GoBack.comment"          : "Accessible label for the back button. Used by the screen reader.",
+
+    "ImageCount"              : "Photo {0} of {1}",
+    "_ImageCount.comment"     : "displays the currently viewed image (0) out of the total number of images (1)",
+
+    "Slideshow"               : "Slideshow",
+    "Slide"                   : "Image",
+    "imageAttribution"                 : "Image attribution",
+    "_imageAttribution.comment"        : "Image attribution",
+
+    "offline_noContent"                : "This content is not available in offline mode.",
+    "_offline_noContent.comment"       : "problem loading content specific content",
+
+    "standardErrorDescription"          : "There was a problem. Please try again.",
+    "_standardErrorDescription.comment" : "Descriptive label to display standard error message",
+
+    "mediaPlaybackContentRegionAriaLabel"  :"Media playback",
+    "mediaPlaybackControlsAriaLabel"       :"Playback controls",
+    "mediaPlaybackPlayButtonAriaLabel"     :"Play",
+    "mediaPlaybackSeekBarThumbAriaLabel"   :"Seek bar slider",
+
+    "mediaPlaybackUpdateDownloadButtonLabel"                :"Download",
+    "_mediaPlaybackUpdateDownloadButtonLabel.comment"       :"Label for button that takes users to the store to update the app to a version supporting the video they just tried to play",
+    "mediaPlaybackForceUpdateExplanation"                   :"This video requires a newer version of the application",
+    "_mediaPlaybackForceUpdateExplanation.comment"          :"Label for videos not supported by the current version of the app",
+
+    "mediaPlaybackEnterFullScreenAriaLabel"           :"Show Full Screen",
+    "_mediaPlaybackEnterFullScreenAriaLabel.comment"  :"Label for button to play video full screen",
+    "mediaPlaybackLeaveFullScreenAriaLabel"           :"Exit Full Screen",
+    "_mediaPlaybackLeaveFullScreenAriaLabel.comment"  :"Label for button to play video inline (undo full screen playback)",
+
+    "L2Opened":"SubChannels Shown",
+    "ClickToOpenL2":"Click to show subChannel"
+}

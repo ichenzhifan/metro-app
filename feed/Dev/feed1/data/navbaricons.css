@@ -1,0 +1,17 @@
+﻿.iconLatest:before {
+    content: "\E121";
+}
+.iconVideos:before {
+    content:"\E116";
+}
+.iconImages:before {
+    content:"\E114";
+}
+.iconSports:before {
+    content:url("../images/sport.png");
+}
+.iconPin:before {
+    content:"\E0DB";
+}.iconFilter:before {
+    content:"\E16E";
+}

@@ -1,0 +1,81 @@
+﻿.articlereader section[role=main] {
+    width: 100%;
+    height: 100%;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    z-index: -1;
+}
+
+    .articlereader section[role=main] .articleReaderArea {
+        height: 100%;
+    }
+            .articlereader article #btnUnsnap {
+            display:none;
+        }
+
+@media screen and (-ms-view-state: snapped) {
+    .articlereader section[role=main] {
+        margin-left: 10px;
+        margin-right: 10px;
+        -ms-grid-row: 2;
+        -ms-grid-row-span: 1;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .articlereader article {
+        margin: 10px;
+    }
+
+    .articlereader article #articleTitle {
+        font-weight:400;
+    }
+
+    .articlereader article #articleText {
+        margin-top:10px;
+    }
+
+    .articlereader article #btnUnsnap {
+        display:block !important;
+        margin-top:10px;
+    }
+
+    .articlereader section[role=main] img {
+        width: 90%;
+        height: auto;
+    }
+
+}
+
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+    .articlereader section[role=main] {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .articlereader.fragment header[role=banner] .win-backbutton {
+        -ms-grid-column: 3;
+    }
+}
+
+@media print {
+    .adContainer {display: none;}
+}
+
+#ad1 {
+    width: 160px;
+    height: 600px;
+    margin-top: 1px;
+    position:-ms-page;
+    -ms-grid-column: 3;
+    -ms-grid-row-align: start;
+}
+
+ .defaultArticleReaderTheme .zoomable {
+        overflow: hidden;
+}
+ .defaultArticleReaderTheme .zoomable .orchestrator {
+            overflow-x: hidden;
+ }

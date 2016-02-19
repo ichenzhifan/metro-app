@@ -1,0 +1,196 @@
+﻿@keyframes gridrun {
+    0% {
+        background-position-y: 0px;
+    }
+
+    100% {
+        background-position-y: -1000px;
+    }
+}
+
+@keyframes gridrun2 {
+    0% {
+        background-position-y: 0px;
+    }
+
+    100% {
+        background-position-y: 1000px;
+    }
+}
+
+
+div.splashwindow {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: #fff;
+    overflow: hidden;
+    transition: opacity 0.8s linear;
+    z-index:1000002
+}
+
+    div.splashwindow > div {
+        background-image: url(../images/grid.png);
+        background-size: 3%;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+        div.splashwindow > div:nth-child(1) {
+            animation-name: gridrun;
+            transition: -ms-transform 0.8s linear,opacity 0.3s linear;
+            -ms-transform-origin: center bottom;
+            -ms-transform: perspective(50px) rotateX(-90deg);
+            
+        }
+
+
+
+        div.splashwindow > div:nth-child(3) {
+            animation-name: gridrun2;
+            transition: -ms-transform 0.8s linear,opacity 0.3s linear;
+            -ms-transform-origin: center top;
+            -ms-transform: perspective(50px) rotateX(90deg);
+        }
+
+
+
+    div.splashwindow div.div_content {
+        position: fixed;
+        width: 269px;
+        height: 82px;
+        background-image: none;
+        padding: 10px 0px;
+        z-index: 2;
+    }
+
+        div.splashwindow div.div_content > div {
+            display: block;
+            float: left;
+            background-repeat: no-repeat;
+        }
+
+            div.splashwindow div.div_content > div:nth-child(1) {
+                background-image: url('../images/F.png');
+                height: 62px;
+                width: 42px;
+                opacity: 0;
+                -ms-transform: translateX(10px);
+                transition: opacity 0.2s ease-in;
+                transition-delay: 2.8s;
+            }
+
+            div.splashwindow div.div_content > div:nth-child(2) {
+                background-image: url('../images/O.png');
+                width: 60px;
+                height: 64px;
+                opacity: 0;
+                -ms-transform: translateX(10px);
+                transition: opacity 0.2s ease-in;
+                transition-delay: 2.8s;
+            }
+
+            div.splashwindow div.div_content > div:nth-child(3) {
+                width: 62px;
+                height: 62px;
+                opacity: 0;
+                transition: opacity 2s linear;
+            }
+
+                div.splashwindow div.div_content > div:nth-child(3) > div.div_origin {
+                    position: absolute;
+                    background-image: url('../images/X.png');
+                    width: 62px;
+                    height: 62px;
+                    background-size: 62px 62px;
+                    background-repeat: no-repeat;
+                    transition: -ms-transform 2s linear;
+                    opacity: 1;
+                    -ms-transform: scale(6);
+                }
+
+                div.splashwindow div.div_content > div:nth-child(3) > div.div_cut {
+                    position: absolute;
+                    width: 62px;
+                    height: 62px;
+                    background-image: url('../images/X2.png');
+                    background-size: 62px 62px;
+                    background-repeat: no-repeat;
+                    transition: -ms-transform 2s linear, opacity 0.2s linear;
+                    transition-delay:0s, 2.5s;
+                    opacity: 1;
+                    -ms-transform: scale(6);
+                }
+
+            div.splashwindow div.div_content > div:nth-child(4) {
+                background-image: url('../images/4.png');
+                width: 54px;
+                height: 63px;
+                opacity: 0;
+                -ms-transform: translateX(-10px);
+                transition: opacity 0.2s ease-in;
+                transition-delay: 2.8s;
+            }
+
+            div.splashwindow div.div_content > div:nth-child(5) {
+                background-image: url('../images/0.png');
+                width: 51px;
+                height: 64px;
+                opacity: 0;
+                -ms-transform: translateX(-15px);
+                transition: opacity 0.2s ease-in;
+                transition-delay: 2.8s;
+            }
+
+            div.splashwindow div.div_content > div.div_subtitle {
+                height:20px;
+                width:269px;
+                line-height:20px;
+                font-size:16px;
+                color:rgb(38,32, 97);
+                float:left;
+                text-align:center;
+                font-family:Arial;
+                opacity:0;
+                -ms-transform:translateY(30px);
+                transition:-ms-transform 0.2s ease-in, opacity 0.2s ease-in;
+                transition-delay:2.9s;
+            }
+
+
+div.showSplashWindow > div:nth-child(1) {
+    -ms-transform: perspective(50px) rotateX(-5deg);
+    opacity: 1;
+}
+
+div.showSplashWindow > div:nth-child(3) {
+    -ms-transform: perspective(50px) rotateX(5deg);
+    opacity: 1;
+}
+
+div.showSplashWindow div.div_content > div:nth-child(3) {
+    opacity:0.5;
+}
+
+div.showSplashWindow div.div_content > div:nth-child(3) > div.div_origin, div.showSplashWindow div.div_content > div:nth-child(3) > div.div_cut {
+    -ms-transform: scale(1);
+}
+div.showSplashWindow div.div_content > div:nth-child(3) > div.div_cut {
+    opacity:0;
+}
+
+div.showSplashWindow div.div_content > div:nth-child(1), div.showSplashWindow div.div_content > div:nth-child(2), div.showSplashWindow div.div_content > div:nth-child(4), div.showSplashWindow div.div_content > div:nth-child(5) {
+    opacity:1;
+}
+
+div.showSplashWindow div.div_content > div.div_subtitle {
+    opacity:1;
+    -ms-transform:translateY(0px);
+}
+
+div.hideSplashWindow {
+    opacity:0;
+}

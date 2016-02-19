@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Tribune WGN</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+    <script src="/MSAdvertisingJS/ads/ad.js"></script>
+
+    <!-- BingSdk references -->
+    <link href="/BingSdk/css/BingSdk.css" rel="stylesheet" />
+    <link href="/BingSdk/css/BingSdkArticle.css" rel="stylesheet" />
+    <script src="/BingSdk/js/BingSdk.js"></script>
+
+    <!-- Tribune references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <link href="/css/dialog.css" rel="stylesheet" />
+    <link href="/css/tip.css" rel="stylesheet" />
+    <link href="/css/splash.css" rel="stylesheet" />
+    <script src="/js/default.js"></script>
+    <script src="/js/navigator.js"></script>
+    <script src="/data/navbar.js"></script>
+    <script src="/data/data.js"></script>
+    <script src="pages/search/searchResults.js"></script>
+    <script src="/js/dialog.js"></script>
+    <script src="/js/tip.js"></script>
+    <script src="/js/splash.js"></script>
+    <script src="js/Background.js"></script>
+</head>
+<body>
+    <!-- Navbar declaration -->
+    <div id="appNavBar" class="appNavBar" data-win-control="WinJS.UI.AppBar" data-win-options="{placement:'top'}">
+        <button class="navBarCom" data-win-control="WinJS.UI.AppBarCommand" data-win-options="{
+                id:'navHome',
+                label: 'HOME',
+                icon: 'home',
+                section:'selection',
+                tooltip:'HOME',
+            }">
+        </button>
+        <button class="navBarCom" data-win-control="WinJS.UI.AppBarCommand" data-win-options="{
+                id:'navLatest',
+                label: 'LATEST',
+                icon: 'clock',
+                section:'selection',
+                tooltip:'LATEST',
+            }">
+        </button>
+        <button class="navBarCom" data-win-control="WinJS.UI.AppBarCommand" data-win-options="{
+                id:'navVideos',
+                label: 'VIDEOS',
+                icon: 'video',
+                section:'selection',
+                tooltip:'VIDEOS',
+            }">
+        </button>
+    </div>
+
+    <!-- Content div -->
+    <div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/home/home.html'}"></div>
+</body>
+</html>

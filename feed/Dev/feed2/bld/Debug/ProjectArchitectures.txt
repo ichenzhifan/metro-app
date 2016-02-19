@@ -1,0 +1,2 @@
+D:\branch\Win8App\Tribune\Dev\Q13FOX\Q13FOX.jsproj;neutral
+D:\branch\Win8App\Tribune\Dev\Q13FOXTask\Q13FOXTask.csproj;neutral

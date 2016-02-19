@@ -1,0 +1,2 @@
+D:\branch\Win8App\Tribune\Dev\FOX40\FOX40.jsproj;neutral
+D:\branch\Win8App\Tribune\Dev\FOX40Task\FOX40Task.csproj;neutral

@@ -1,0 +1,17 @@
+﻿/* Hide the back button */
+.win-backbutton {display: none;}
+/* Remove the grid layout */
+.fragment {display: block;height: auto;width: 100%;position: relative;margin: 0px;overflow: visible;}
+/* Remove the header */
+.fragment header[role=banner] {display: none;}
+/* Remove multicolumn layout *//* Resize the content to take up available space*//* Remove scrolling behavior */
+.itemdetailpage .content {display: block;height: 100%;overflow: visible;width: 100%;}
+.itemdetailpage .content article {height: 100%;width: 100%;margin: 0px;overflow: visible;}
+/* Adjust margins *//* Increase font sizes */
+.itemdetailpage .content article header .item-title {margin-bottom: 29px;font-size: 450%;}
+.itemdetailpage .content article .item-image {height: 480px;width: 920px;margin-top: 20px;margin-bottom: 40px;}
+/* Remove rating and review controls */
+.itemdetailpage .content article .item-rating {display: none;}
+.itemdetailpage .content article .item-review {display: none; }
+.itemdetailpage .content article .item-content p {height: auto;width: 100%;}
+.adContainer {display: none;}

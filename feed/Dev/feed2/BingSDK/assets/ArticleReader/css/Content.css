@@ -1,0 +1,188 @@
+﻿/********************************************************
+* *
+* © Microsoft. All rights reserved. *
+* *
+*********************************************************/
+body {
+    margin: 0px;
+    padding: 0px;
+    word-wrap: break-word;
+    color: #333333;
+}
+    body[data-text-size=small][data-text-style=primary] {
+        font-family: "Segoe UI", Tahoma, Verdana, Arial, sans-serif;
+        font-size: 14.66667px;
+        line-height: 20px;
+        font-weight: 400;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        letter-spacing: 0.02em;
+    }
+    body[data-text-size=medium][data-text-style=primary] {
+        font-family: "Segoe UI", Tahoma, Verdana, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 400;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        letter-spacing: 0.02em;
+    }
+    body[data-text-size=large][data-text-style=primary] {
+        font-family: "Segoe UI", Tahoma, Verdana, Arial, sans-serif;
+        font-size: 21.33333px;
+        line-height: 26.66667px;
+        font-weight: 400;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        letter-spacing: 0.02em;
+    }
+    body[data-text-size=xlarge][data-text-style=primary] {
+        font-family: "Segoe UI", Tahoma, Verdana, Arial, sans-serif;
+        font-size: 26.66667px;
+        line-height: 32px;
+        font-weight: 400;
+        padding-top: 3px;
+        padding-bottom: 5px;
+        letter-spacing: 0.02em;
+    }
+    body[data-text-size=small][data-text-style=secondary] {
+        font-family: Cambria, "Times New Roman", Times, serif;
+        font-size: 14.66667px;
+        line-height: 20px;
+        font-weight: 400;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        letter-spacing: 0.02em;
+    }
+    body[data-text-size=medium][data-text-style=secondary] {
+        font-family: Cambria, "Times New Roman", Times, serif;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 400;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        letter-spacing: 0.02em;
+    }
+    body[data-text-size=large][data-text-style=secondary] {
+        font-family: Cambria, "Times New Roman", Times, serif;
+        font-size: 21.33333px;
+        line-height: 26.66667px;
+        font-weight: 400;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        letter-spacing: 0.02em;
+    }
+    body[data-text-size=xlarge][data-text-style=secondary] {
+        font-family: Cambria, "Times New Roman", Times, serif;
+        font-size: 26.66667px;
+        line-height: 32px;
+        font-weight: 400;
+        padding-top: 3px;
+        padding-bottom: 5px;
+        letter-spacing: 0.02em;
+    }
+p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+    p + p {
+        margin-top: 20px;
+    }
+h2 {
+    color: #333333;
+    margin-bottom: 10px;
+}
+h3 {
+    color: #333333;
+    margin-bottom: 10px;
+}
+* + h2, * + h3 {
+    margin-top: 20px;
+}
+strong, b {
+    font-weight: 600;
+}
+[data-text-size=small] h2 {
+    font-family: "Segoe UI", Tahoma, Verdana, Arial, sans-serif;
+    font-size: 26.66667px;
+    line-height: 32px;
+    font-weight: 400;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    letter-spacing: 0.02em;
+}
+[data-text-size=small] h3 {
+    font-family: "Segoe UI", Tahoma, Verdana, Arial, sans-serif;
+    font-size: 21.33333px;
+    line-height: 26.66667px;
+    font-weight: 600;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    letter-spacing: 0.02em;
+}
+[data-text-size=medium] h2 {
+    font-family: "Segoe UI", Tahoma, Verdana, Arial, sans-serif;
+    font-size: 42px;
+    line-height: 50px;
+    font-weight: 400;
+    padding-top: 7px;
+    padding-bottom: 3px;
+    letter-spacing: 0em;
+}
+[data-text-size=medium] h3 {
+    font-family: "Segoe UI", Tahoma, Verdana, Arial, sans-serif;
+    font-size: 26.66667px;
+    line-height: 32px;
+    font-weight: 400;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    letter-spacing: 0.02em;
+}
+[data-text-size=large] h2 {
+    font-family: "Segoe UI", Tahoma, Verdana, Arial, sans-serif;
+    font-size: 56px;
+    line-height: 64px;
+    font-weight: 300;
+    padding-top: 5px;
+    padding-bottom: 11px;
+    letter-spacing: 0em;
+}
+[data-text-size=large] h3 {
+    font-family: "Segoe UI", Tahoma, Verdana, Arial, sans-serif;
+    font-size: 42px;
+    line-height: 50px;
+    font-weight: 400;
+    padding-top: 7px;
+    padding-bottom: 3px;
+    letter-spacing: 0em;
+}
+[data-text-size=xlarge] h2 {
+    font-family: "Segoe UI", Tahoma, Verdana, Arial, sans-serif;
+    font-size: 56px;
+    line-height: 64px;
+    font-weight: 300;
+    padding-top: 5px;
+    padding-bottom: 11px;
+    letter-spacing: 0em;
+}
+[data-text-size=xlarge] h3 {
+    font-family: "Segoe UI", Tahoma, Verdana, Arial, sans-serif;
+    font-size: 42px;
+    line-height: 50px;
+    font-weight: 400;
+    padding-top: 7px;
+    padding-bottom: 3px;
+    letter-spacing: 0em;
+}
+.hiddenContentSpan {
+    visibility: hidden;
+    line-height: 0px;
+    font-size: 0.1px;
+}
+    .hiddenContentSpan:before {
+        content: "\00a0";
+    }
+a {
+    text-decoration: none;
+    color: #004276;
+}

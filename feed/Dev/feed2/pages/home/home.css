@@ -1,0 +1,321 @@
+﻿.homepage section[role=main] {
+    width: 100%;
+    height: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.homepage #root {
+    height: 100%;
+    width: 100%;
+    display: -ms-grid;
+    -ms-grid-columns: 120px max-content 60px max-content 180px max-content 60px max-content;
+    -ms-grid-rows: 1fr 30px;
+}
+
+    .homepage #root #featuredStories {
+        -ms-grid-column: 2;
+        -ms-grid-row-align: start;
+        height: 100%;
+        min-width: 700px;
+    }
+
+    .homepage #root #latestECDiv {
+        -ms-grid-column: 4;
+        height: 100%;
+    }
+
+    .homepage #root #videosECDiv {
+        -ms-grid-column: 6;
+        height: 100%;
+    }
+
+    .homepage #root #sportsECDiv {
+        -ms-grid-column: 7;
+        height: 100%;
+    }
+
+    .homepage #root #imagesECDiv {
+        -ms-grid-column: 8;
+        height: 100%;
+    }
+
+.homepage .sectionBlock {
+    display: -ms-grid;
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 40px 1fr;
+}
+
+    .homepage .sectionBlock .sectionTitle {
+        font-weight: bold;
+        font-size: x-large;
+        color: rgba(1,77,123, 1);
+        display: -ms-flexbox;
+        -ms-flex-direction: row;
+        -ms-flex-align: center;
+        -ms-grid-row: 1;
+    }
+
+        .homepage .sectionBlock .sectionTitle.titleHover span:hover {
+            font-size: xx-large;
+            color: #1a3969;
+        }
+
+
+
+.homepage .sectionBlock .sectionBody {
+    -ms-grid-row: 2;
+}
+
+.imageAttribution {
+    display: none;
+}
+
+.homepage #ad1 {
+    width: 160px;
+    height: 550px;
+    margin-top: 42px;
+    position: relative;
+    -ms-grid-column: 5;
+    -ms-grid-row-align: start;
+}
+
+/*FEATURED  STORIES*/
+#basicFlipView {
+    height: 360px;
+}
+
+.overlaidItemTemplate {
+    width: 98%;
+    display: -ms-grid;
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 340px 1fr;
+    margin-left: -20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: rgba(0,0,0,0.2) 5px 5px 10px;
+}
+
+    .overlaidItemTemplate img {
+        -ms-grid-column-align: stretch;
+        -ms-grid-row-align: center;
+        -ms-grid-row: 1;
+        min-height: 380px;
+    }
+
+    .overlaidItemTemplate .overlay {
+        position: absolute;
+        background-color: rgba(0,0,0,0.65);
+        -ms-grid-row: 1;
+        -ms-grid-column-align: stretch;
+        bottom: 0px;
+        width: 100%;
+        height: 40px;
+        padding: 10px 15px;
+        overflow: hidden;
+    }
+
+        .overlaidItemTemplate .overlay .ItemTitle {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 18px;
+        }
+
+#ContextContainer {
+    -ms-grid-column: 1;
+    -ms-grid-row: 3;
+}
+
+    #ContextContainer input[type="radio"] {
+        margin: 10px 5px;
+        padding: 0px;
+        color: rgba(1,77,123, 1);
+    }
+
+        #ContextContainer input[type="radio"]::-ms-check {
+            padding: 0px;
+            border: 1px rgb(191, 191,191) solid;
+            border-radius: 100%;
+            color: transparent;
+        }
+
+
+        #ContextContainer input[type="radio"]:checked::-ms-check {
+            padding: 0px;
+            background-color: #aaa;
+        }
+
+    #ContextContainer .contextControl {
+        height: 40px;
+        width: 100%;
+        text-align: center;
+    }
+
+#featuredAds {
+    display: -ms-grid;
+    -ms-grid-columns: 500px 10px 1fr;
+    -ms-grid-rows: 20px 130px;
+    padding: 0 20px 0 0;
+    position: relative;
+}
+
+    #featuredAds #fad1 {
+        -ms-grid-column: 1;
+        -ms-grid-row: 2;
+    }
+
+    #featuredAds #fad2 {
+        -ms-grid-column: 3;
+        -ms-grid-row: 2;
+    }
+/*FEATURED  STORIES END*/
+@media (-ms-view-state: fullscreen-landscape), (-ms-view-state: filled),(-ms-view-state: fullscreen-portrait)
+{
+    .homepage #root #latestECSnapped,
+    .homepage #root #videosECSnapped {
+        display: none;
+    }
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .homepage #root {
+        display: -ms-grid;
+        -ms-grid-columns: 1fr;
+        -ms-grid-rows: auto 900px auto 900px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+        .homepage #root #featuredStories,
+        .homepage #root #latestEC,
+        .homepage #root #videosEC,
+        .homepage #root #ad1 {
+            display: none;
+        }
+
+        .homepage #root #latestECDiv {
+            -ms-grid-row: 1;
+            -ms-grid-column: 1;
+        }
+
+        .homepage #root #latestECSnapped {
+            -ms-grid-row: 2;
+            -ms-grid-column: 1;
+            overflow-y: hidden;
+        }
+
+        .homepage #root #videosECDiv {
+            -ms-grid-row: 3;
+            -ms-grid-column: 1;
+        }
+
+        .homepage #root #videosECSnapped {
+            -ms-grid-row: 4;
+            -ms-grid-column: 1;
+            overflow-y: hidden;
+        }
+
+
+    .homepage #videosECDiv .sectionTitle,
+    .homepage #latestECDiv .sectionTitle {
+        width: 320px;
+        height: 40px;
+        background: #252162;
+    }
+
+        .homepage #videosECDiv .sectionTitle span,
+        .homepage #latestECDiv .sectionTitle span {
+            color: #fff;
+            margin-left: 15px;
+        }
+
+    .homepage #root .win-container:hover {
+        outline: none;
+        background: rgba(0,0,0,0.1);
+    }
+
+    .homepage #latestECSnapped .win-item {
+        display: -ms-grid;
+        -ms-grid-columns: 90px 1fr;
+        -ms-grid-rows: 90px;
+    }
+
+        .homepage #latestECSnapped .win-item .itemThumb {
+            -ms-grid-column-align: stretch;
+            -ms-grid-row-align: center;
+            -ms-grid-column: 1;
+        }
+
+        .homepage #latestECSnapped .win-item .itemText {
+            margin-left: 5px;
+            -ms-grid-column: 2;
+        }
+
+            .homepage #latestECSnapped .win-item .itemText h4 {
+                color: #252162;
+            }
+
+    .homepage #videosECDiv .sectionTitle .arrowRight,
+    .homepage #latestECDiv .sectionTitle .arrowRight {
+        display: none;
+    }
+
+    .homepage #videosECSnapped .win-item {
+        display: -ms-grid;
+        -ms-grid-columns: 90px 1fr;
+        -ms-grid-rows: 90px;
+    }
+
+        .homepage #videosECSnapped .win-item .itemThumb {
+            display: -ms-grid;
+            -ms-grid-columns: 90px;
+            -ms-grid-rows: 90px;
+            position: relative;
+        }
+
+            .homepage #videosECSnapped .win-item .itemThumb img {
+                -ms-grid-column-align: stretch;
+                -ms-grid-row-align: center;
+            }
+
+            .homepage #videosECSnapped .win-item .itemThumb .overflow {
+                background: rgba(255,255,255,0.4);
+                width: 90px;
+                height: 90px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .homepage #videosECSnapped .win-item .itemThumb .play {
+                position: absolute;
+                top: 15px;
+                left: 15px;
+            }
+
+            .homepage #videosECSnapped .win-item .itemThumb .win-commandicon.win-commandring {
+                width:30px;
+                height:30px;
+            }
+
+            .homepage #videosECSnapped .win-item .itemThumb .win-commandimage {
+                width:30px;
+                height:30px;
+                font-size:9pt;
+                line-height:30px;
+            }
+
+        .homepage #videosECSnapped .win-item .itemText {
+            margin-left: 5px;
+            -ms-grid-column: 2;
+        }
+
+            .homepage #videosECSnapped .win-item .itemText h4 {
+                color: #252162;
+            }
+}
+
+@media screen and (-ms-view-state: fullscreen-portrait) {
+    .homepage section[role=main] {
+        margin-left: 0px;
+    }
+}

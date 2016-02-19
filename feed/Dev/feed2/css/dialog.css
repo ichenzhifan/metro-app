@@ -1,0 +1,234 @@
+﻿
+div.dialogbackground {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 100001;
+    font-family: Arial;
+    transition: opacity 0.5s linear;
+    opacity: 0;
+    /*background-color:rgba(255,255,255,0.5);*/
+    background-color: rgba(0,0,0,0.5);
+}
+
+div.showdialog {
+    opacity: 1;
+}
+
+div.dialogbackground div.dialog {
+    display: -ms-grid;
+    -ms-grid-columns: 1fr 4fr 1fr;
+    -ms-grid-rows: 45px 1fr;
+}
+
+    div.dialogbackground div.dialog div.dialogleft {
+        -ms-grid-column: 1;
+        -ms-grid-row: 2;
+    }
+
+    div.dialogbackground div.dialog div.dialogcontent {
+        -ms-grid-column: 2;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 2;
+        display: -ms-grid;
+        -ms-grid-columns: 120px 1fr;
+        -ms-grid-rows: 45px 1fr 60px;
+    }
+
+        div.dialogbackground div.dialog div.dialogcontent div.dialoglog {
+            -ms-grid-column: 1;
+            -ms-grid-row: 2;
+            -ms-grid-row-span: 3;
+            min-height: 120px;
+        }
+
+
+
+            div.dialogbackground div.dialog div.dialogcontent div.dialoglog div {
+                position: absolute;
+                width: 70px;
+                height: 70px;
+                border: 3px solid #fff;
+                background-size: 60px;
+                background-repeat: no-repeat;
+                background-position: center;
+                -ms-transform: translateY(0px) translateX(0px);
+                opacity: 0;
+                transition: -ms-transform 0.5s ease-in, opacity 0.5s ease-in;
+            }
+
+                div.dialogbackground div.dialog div.dialogcontent div.dialoglog div:nth-child(1) {
+                    background-color: rgba(86,193,209,0.9);
+                    transition-delay: 0.6s;
+                    z-index: 3;
+                }
+
+
+
+        div.dialogbackground div.dialog div.dialogcontent div.warningico div:nth-child(1) {
+            background-image: url(../images/system_waring.png);
+        }
+
+        div.dialogbackground div.dialog div.dialogcontent div.checkico div:nth-child(1) {
+            background-image: url(../images/system_check.png);
+        }
+
+        div.dialogbackground div.dialog div.dialogcontent div.messageico div:nth-child(1) {
+            background-image: url(../images/system_message.png);
+        }
+
+        div.dialogbackground div.dialog div.dialogcontent div.banico div:nth-child(1) {
+            background-image: url(../images/system_ban.png);
+        }
+
+        div.dialogbackground div.dialog div.dialogcontent div.setico div:nth-child(1) {
+            background-image: url(../images/system_set.png);
+        }
+
+
+
+        div.dialogbackground div.dialog div.dialogcontent div.dialoglog div:nth-child(2) {
+            background-color: rgba(250,202,130,0.9);
+            transition-delay: 0.5s;
+            z-index: 2;
+        }
+
+        div.dialogbackground div.dialog div.dialogcontent div.dialoglog div:nth-child(3) {
+            background-color: rgba(239,133,135,0.9);
+            transition-delay: 0.4s;
+            z-index: 1;
+        }
+
+div.showdialog div.dialog div.dialogcontent div.dialoglog div:nth-child(1) {
+    -ms-transform: translateY(-45px) translateX(23px);
+}
+
+div.showdialog div.dialog div.dialogcontent div.dialoglog div:nth-child(2) {
+    -ms-transform: translateY(-28px) translateX(5px);
+}
+
+div.showdialog div.dialog div.dialogcontent div.dialoglog div:nth-child(3) {
+    -ms-transform: translateY(-10px) translateX(41px);
+}
+
+div.showdialog div.dialog div.dialogcontent div.dialoglog div {
+    opacity: 1;
+}
+
+div.dialogbackground div.dialog div.dialogcontent div.dialogtitle {
+    -ms-grid-column: 2;
+    -ms-grid-row: 1;
+    line-height: 45px;
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 10px;
+    overflow: hidden;
+    color: white;
+}
+
+div.dialogbackground div.dialog div.dialogcontent div.dialogtext {
+    -ms-grid-column: 2;
+    -ms-grid-row: 2;
+    padding: 10px;
+    font-size: 20px;
+    line-height: 20px;
+    color: #fff;
+}
+
+
+
+
+div.dialogbackground div.dialog div.dialogcontent div.dialogbuttonbar {
+    -ms-grid-column: 2;
+    -ms-grid-row: 3;
+    text-align: right;
+    padding: 5px 0px;
+}
+
+
+
+
+    div.dialogbackground div.dialog div.dialogcontent div.dialogbuttonbar button {
+        border: 3px solid #fff;
+        /*color: #444;*/
+        color: #fff;
+        padding: 5px 10px;
+        margin: 0px 2px;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all 0.5s linear;
+    }
+
+        div.dialogbackground div.dialog div.dialogcontent div.dialogbuttonbar button:hover {
+            background-color: #fff;
+            color: #444;
+            border-color: #444;
+        }
+
+div.dialogbackground div.dialog div.dialogright {
+    -ms-grid-column: 3;
+    -ms-grid-row: 2;
+}
+
+
+div.dialogbackground div.normaldialog div.dialogleft, div.dialogbackground div.normaldialog div.dialogcontent div.dialogtext, div.dialogbackground div.normaldialog div.dialogcontent div.dialogbuttonbar, div.dialogbackground div.normaldialog div.dialogright {
+    background-color: rgba(86,193,209,0.7);
+}
+
+    div.dialogbackground div.normaldialog div.dialogcontent div.dialoglog, div.dialogbackground div.normaldialog div.dialogcontent div.dialogbuttonbar button {
+        background-color: rgb(86,193,209);
+    }
+
+        div.dialogbackground div.normaldialog div.dialogcontent div.dialoglog div:nth-child(1) {
+            background-color: rgba(86,193,209,0.9);
+        }
+
+        div.dialogbackground div.normaldialog div.dialogcontent div.dialoglog div:nth-child(2) {
+            background-color: rgba(250,202,130,0.9);
+        }
+
+        div.dialogbackground div.normaldialog div.dialogcontent div.dialoglog div:nth-child(3) {
+            background-color: rgba(239,133,135,0.9);
+        }
+
+div.dialogbackground div.warningdialog div.dialogleft, div.dialogbackground div.warningdialog div.dialogcontent div.dialogtext, div.dialogbackground div.warningdialog div.dialogcontent div.dialogbuttonbar, div.dialogbackground div.warningdialog div.dialogright {
+    background-color: rgba(250,202,130,0.7);
+}
+
+    div.dialogbackground div.warningdialog div.dialogcontent div.dialoglog, div.dialogbackground div.warningdialog div.dialogcontent div.dialogbuttonbar button {
+        background-color: rgb(250,202,130);
+    }
+
+        div.dialogbackground div.warningdialog div.dialogcontent div.dialoglog div:nth-child(1) {
+            background-color: rgba(250,202,130,0.9);
+        }
+
+        div.dialogbackground div.warningdialog div.dialogcontent div.dialoglog div:nth-child(2) {
+            background-color: rgba(239,133,135,0.9);
+        }
+
+        div.dialogbackground div.warningdialog div.dialogcontent div.dialoglog div:nth-child(3) {
+            background-color: rgba(86,193,209,0.9);
+        }
+
+div.dialogbackground div.bandialog div.dialogleft, div.dialogbackground div.bandialog div.dialogcontent div.dialogtext, div.dialogbackground div.bandialog div.dialogcontent div.dialogbuttonbar, div.dialogbackground div.bandialog div.dialogright {
+    background-color: rgba(239,133,135,0.7);
+}
+
+    div.dialogbackground div.bandialog div.dialogcontent div.dialoglog, div.dialogbackground div.bandialog div.dialogcontent div.dialogbuttonbar button {
+        background-color: rgb(239,133,135);
+    }
+
+        div.dialogbackground div.bandialog div.dialogcontent div.dialoglog div:nth-child(1) {
+            background-color: rgba(239,133,135,0.9);
+        }
+
+        div.dialogbackground div.bandialog div.dialogcontent div.dialoglog div:nth-child(2) {
+            background-color: rgba(86,193,209,0.9);
+        }
+
+        div.dialogbackground div.bandialog div.dialogcontent div.dialoglog div:nth-child(3) {
+            background-color: rgba(250,202,130,0.9);
+        }

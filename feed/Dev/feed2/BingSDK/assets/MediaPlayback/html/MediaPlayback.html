@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <title></title>
+</head>
+<body>
+
+    <div id="mediaPlaybackContent" class="mediaPlaybackContent" role="region" data-win-res="{ attributes: { 'aria-label': '/BingApps/mediaPlaybackContentRegionAriaLabel' } }">
+        <!--This holds the media element-->
+        <div id="mediaPlaybackErrorScreen" class="mediaPlaybackErrorScreen platformHide">
+            
+            <div class="mediaPlaybackErrorScreenContent">
+                <div id="mediaPlaybackReloadIcon" class="win-commandicon win-commandring roundUIBtnLight reloadButton"></div>
+                <div id="mediaPlaybackMessage" class="mediaPlaybackMessage"></div>
+            </div>
+        </div>
+        <div id="mediaPlaybackTopBarWrapper " class="mediaPlaybackTopBarWrapper">
+            <div id="mediaPlaybackTopBar" class="platformHide">
+                <div class="mediaPlaybackTopBar">
+                    <img id="topBarLogo" class="mediaPlaybackTopBarLogo platformHide" src=""/>
+                    <div class="mediaPlaybackTopBarBackButton"><button id="mediaPlaybackFullScreenToggleButton" class="win-commandicon win-commandring roundUIBtnLight fullScreenToggleButton" data-win-res="{ attributes: { 'aria-label': '/BingApps/mediaPlaybackEnterFullScreenAriaLabel' } }" data-supportedmodes="full partial minimal" data-supportedmediatypes="audio video"></button></div>
+                    <div id="topBarTitle" class="mediaPlaybackTopBarTitle"></div>
+                    <div id="topBarAttribution" class="mediaPlaybackTopBarAttribution"></div>
+                    <div class ="mediaPlaybackTopBarTime">
+                        <span id="topBarCurrentTime" class="mediaPlaybackTopBarCurrentTime"></span>
+                        <span id="topBarTotalTime" class="mediaPlaybackTopBarTotalTime"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- When current video reaches to END we will show this UI -->
+        <div id="mediaPlaybackCountdownUI" class="platformHide">
+            <div id="nextVideoPlaybackButton" class="mediaPlaybackFullDivButton" tabindex="0" data-win-res="{ attributes: { 'aria-label': '/BingApps/mediaPlaybackControlsAriaLabel' } }" ></div>		
+            <div class="countdownContent">
+                <div class="font42L" id="countdownText">UP NEXT IN 5</div>
+                <div class="nextVideoTitleContainer"><div class="fontLL mask" id="nextVideoTitle">TITLE</div></div>
+                <div class="partnerAttribution">
+                    <div class="favicon">
+                        <img id="nextVideoFavicon" alt="" height="24"/>
+                    </div>
+                    <div class="source">
+                        <span id="nextVideoSource" class="fontSB"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="nextVideoThumbnailContainer">
+                <div id="nextVideoThumbnail"></div>
+                <div id="nextVideoPlaybackButtonPlaceHolder" class="win-commandicon win-commandring nextVideoPlaybackButtonPlaceHolder" tabindex="0"></div>
+            </div>
+        </div>
+
+        <div class="mediaPlaybackMediaStrip" id="mediaPlaybackMediaStrip"></div>
+        <!-- These objects are here in order to get the absolute path from the relative one for the play/pause buttons -->
+        <img id="mediaPlaybackGripperHarvest" class="mediaPlaybackHarvest" src="/BingSdk/assets/MediaPlayback/Resources/GripperRest_inline.svg" />
+
+        <div id="mediaPlaybackControlsLayer" role="group" class="mediaPlaybackControlsLayer">
+            <div id="mediaPlaybackPosterImageContainer" aria-hidden="true" class="mediaPlaybackPosterImageContainer"><div id="mediaPlaybackPosterImagePlaceholder" class="mediaPlaybackPosterImagePlaceholder"><table class="centeringTable"><tr><td class="centeringTable mediaPlaybackPosterImagePlaceholder"></td></tr></table></div><img id="mediaPlaybackPosterImage" class="mediaPlaybackPosterImage hiddenObject" src="" /></div>
+            <img id="mediaPlaybackSeekBarThumb" role="slider" tabindex="0" class="mediaPlaybackSeekBarThumb" src="/BingSdk/assets/MediaPlayback/Resources/GripperRest_inline.svg" data-win-res="{ attributes: { 'aria-label': '/BingApps/mediaPlaybackSeekBarThumbAriaLabel' } }" />
+            <div id="mediaPlaybackSeekBarThumbToolTip" class="mediaPlaybackSeekBarThumbToolTipContainer" aria-hidden="true"><div class="mediaPlaybackSeekBarThumbToolTip"></div></div>
+
+            <table class="fullWidthTable" id="seekAndPlaybackControlTable">
+                <tr>
+                    <td id="seekAndPlaybackControlTableSpacerLeft" class="seekAndPlaybackControlTableSpacerLeft"></td>
+                    <td class="fillCell">
+                        <div id="mediaPlaybackSeekBarControls" class="mediaPlaybackSeekBarControls">
+                            <!--This holds the playback time indicator -->
+                            <div id="mediaPlaybackTimeIndicator" role="timer" class="mediaPlaybackTimeIndicator colorPrimaryText win-type-xx-small" data-supportedmediatypes="audio"></div>
+                            <!--This is the seek bar, it has an invisible area on both sides of the actual visual to aid touch events-->
+                            <div id="mediaPlaybackSeekBar" role="progressbar" class="mediaPlaybackSeekBar colorPrimaryText win-type-small">
+                                <div id="mediaPlaybackSeekBarRail" class="mediaPlaybackSeekBarRail">
+                                <div id="mediaPlaybackSeekBarProgress" class="mediaPlaybackSeekBarProgress"></div>
+                                    </div>
+                                <div id="mediaPlaybackCurrentTimeIndicator" class="mediaPlaybackCurrentTimeIndicator" data-supportedmediatypes="video"></div>
+                                <div id="mediaPlaybackTotalTimeIndicator" class="mediaPlaybackTotalTimeIndicator colorPrimaryText win-type-xx-small" data-supportedmediatypes="video"></div>
+                            </div>
+                            <div id="mediaPlaybackControlsBackdrop" aria-hidden="true" class="mediaPlaybackControlsBackdrop"></div>
+                        </div>
+                    </td>
+                    <td id="seekAndPlaybackControlTableSpacerMiddle" class="seekAndPlaybackControlTableSpacerMiddle"></td>
+                    <td class="formattingCell">
+                        <!--This div contains the play/-->
+                        <div id="mediaPlaybackControls" role="region" class="colorPrimaryText mediaPlaybackControls">
+                                <table class="formattingTable playbackControlTable" id="playbackControlTable">
+                                    <tr>
+                                        <td class="formattingCell">
+                                            <button id="screenSizeToggleButton" class="win-commandicon win-commandring roundUIBtnLight fullScreenSizeToggleButton" data-win-res="{ attributes: { 'aria-label': '/BingApps/mediaPlaybackEnterFullScreenAriaLabel' } }" data-supportedmodes="full partial minimal" data-supportedmediatypes="audio video"></button>
+                                            <button id="mediaPlaybackPlayButton" class="win-commandicon win-commandring roundUIBtnLight grayButton playButton" tabindex="0" data-win-res="{ attributes: { 'aria-label': '/BingApps/mediaPlaybackControlsAriaLabel' } }" data-supportedmodes="full partial minimal" data-supportedmediatypes="audio video"></button></td>
+                                    </tr>
+                                </table>
+                                <div id="mediaPlaybackPlayButtonAriaLabel" style="display: none" aria-hidden="true" data-win-res="{ attributes: { 'aria-label': '/BingApps/mediaPlaybackPlayButtonAriaLabel' } }"></div>
+                                <div id="mediaPlaybackPauseButtonAriaLabel" style="display: none" aria-hidden="true" data-win-res="{ attributes: { 'aria-label': '/BingApps/mediaPlaybackPauseButtonAriaLabel' } }"></div>
+                                <div id="mediaPlaybackEnterFullScreenAriaLabel" style="display: none" aria-hidden="true" data-win-res="{ attributes: { 'aria-label': '/BingApps/mediaPlaybackEnterFullScreenAriaLabel' } }"></div>
+                                <div id="mediaPlaybackExitFullScreenAriaLabel" style="display: none" aria-hidden="true" data-win-res="{ attributes: { 'aria-label': '/BingApps/mediaPlaybackLeaveFullScreenAriaLabel' } }"></div>
+                        </div>
+                    </td>
+                    <td id="seekAndPlaybackControlTableSpacerRight" class="seekAndPlaybackControlTableSpacerRight"></td>
+                </tr></table>
+         </div>
+
+        <!--This handles all the inputs/mouse keyboard etc-->
+        <div id="mediaPlaybackInputHandler" class="mediaPlaybackInputHandler" data-win-res="{ attributes: { 'aria-label': '/BingApps/mediaPlaybackControlsAriaLabel' } }"></div>
+        <div id="mediaPlaybackSpinnerContainer" class="mediaPlaybackSpinnerContainer"><table class="centeringTable"><tr><td class="centeringTable"><progress class="win-medium win-ring mediaPlaybackSpinner"></progress></td></tr></table></div>
+        <div id="mediaPlaybackForceUpdateScreen" class="mediaPlaybackForceUpdateScreen hiddenObject" data-win-res="{ attributes: { 'aria-label': '/BingApps/mediaPlaybackForceUpdateAriaLabel' } }">
+            <div id="forceUpdateExplanation" class="forceUpdateExplanation" tabindex="0" data-win-res="{ textContent: '/BingApps/mediaPlaybackForceUpdateExplanation' }"></div>
+            <div id="forceUpdateDownloadButtonContainer" class="forceUpdateDownloadButtonContainer"><button id="mediaPlaybackUpgradeDownloadButton" class="mediaPlaybackUpgradeDownloadButton" tabindex="0" data-win-res="{ textContent: '/BingApps/MediaPlaybackUpdateDownloadButtonLabel' }"></button></div>
+        </div>
+    </div>
+</body>
+</html>

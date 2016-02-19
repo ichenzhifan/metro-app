@@ -1,0 +1,89 @@
+﻿div.tip {
+    background-color: #fff;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border: 1px solid #666;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: -0px -0px 5px #000;
+    opacity: 0.5;
+    -ms-transform: translateY(100px) rotateX(0deg);
+    transition: opacity 0.5s linear, -ms-transform 0.8s linear;
+    z-index: 100001;
+}
+
+div.showtip {
+    opacity: 1;
+    -ms-transform: translateY(0px) rotateX(0deg);
+}
+
+
+
+div.tip div.icowrap {
+    display: inline-block;
+    border: 1px solid #666;
+    border-radius: 5px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    transition: opacity 0.2s linear;
+    opacity: 1;
+}
+
+div.tip span.tipcontent {
+    margin-left: 10px;
+    height: 50px;
+    line-height: 20px;
+    font-size: 12px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+    div.tip span.tipcontent label.tip_title {
+        display: block;
+        height: 20px;
+        line-height: 20px;
+        font-size: 17px;
+        overflow: hidden;
+        max-width: 200px;
+        min-width: 50px;
+    }
+
+    div.tip span.tipcontent label.tip_message {
+        display: block;
+        height: 20px;
+        line-height: 15px;
+        font-size: 12px;
+        max-width: 200px;
+        min-width: 50px;
+        height: 30px;
+        overflow: hidden;
+    }
+
+
+.warningico {
+    background-image: url(../images/system_waring.png);
+}
+
+.checkico{
+    background-image: url(../images/system_check.png);
+}
+
+.messageico {
+    background-image: url(../images/system_message.png);
+}
+
+.banico {
+    background-image: url(../images/system_ban.png);
+}
+
+.setico {
+    background-image: url(../images/system_set.png);
+}
+
+.networkbanico {
+    background-image:url(../images/system_networkban.png);
+}
